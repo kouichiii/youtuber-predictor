@@ -2,17 +2,17 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { getChannels, Channel } from "@/lib/api";
+import { getChannels } from "@/lib/api";
 
 export default function DashboardPage() {
-  const [channels, setChannels] = useState<Channel[]>([]);
+  const [totalChannels, setTotalChannels] = useState(0);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     async function fetchData() {
       try {
         const data = await getChannels();
-        setChannels(data);
+        setTotalChannels(data.total);
       } catch (err) {
         console.error(err);
       } finally {
@@ -33,7 +33,7 @@ export default function DashboardPage() {
         <div className="bg-white rounded-lg shadow p-6">
           <div className="text-sm text-gray-500">登録チャンネル数</div>
           <div className="text-3xl font-bold text-purple-600 mt-2">
-            {loading ? "..." : channels.length}
+            {loading ? "..." : totalChannels}
           </div>
         </div>
 
