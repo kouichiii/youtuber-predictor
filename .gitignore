@@ -1,0 +1,59 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.venv/
+venv/
+ENV/
+env/
+*.egg-info/
+dist/
+build/
+
+# Database
+*.db
+*.sqlite3
+
+# Logs
+logs/
+*.log
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Node.js
+node_modules/
+.next/
+out/
+.turbo/
+
+# Next.js
+frontend/.next/
+frontend/out/
+frontend-admin/.next/
+frontend-admin/out/
+
+# Build
+*.tsbuildinfo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# ML Models
+backend/ml/models/*.pkl
+backend/ml/models/*.joblib
+
+# Temporary
+*.tmp
+*.temp
